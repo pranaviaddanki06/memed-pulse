@@ -1,0 +1,1 @@
+import {corpus} from '@/lib/engine';export function GET(_:Request,{params}:{params:{id:string}}){const x=corpus.find(c=>c.id===params.id);return x?Response.json(x):Response.json({error:'Content not found'},{status:404})}

@@ -1,0 +1,1 @@
+import {analyze} from '@/lib/engine';export async function POST(req:Request){try{return Response.json({results:analyze(await req.json()).similar})}catch{return Response.json({error:'Caption required'},{status:400})}}

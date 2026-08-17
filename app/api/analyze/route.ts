@@ -1,0 +1,1 @@
+import {analyze} from '@/lib/engine';export async function POST(req:Request){try{return Response.json(analyze(await req.json()))}catch(e){return Response.json({error:e instanceof Error?e.message:'Analysis failed'},{status:400})}}

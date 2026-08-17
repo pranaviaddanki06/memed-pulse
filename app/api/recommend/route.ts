@@ -1,0 +1,1 @@
+import {optimize} from '@/lib/engine';export async function POST(req:Request){try{const x=await req.json();return Response.json({recommendations:optimize(x,'share')})}catch{return Response.json({error:'Invalid request'},{status:400})}}
