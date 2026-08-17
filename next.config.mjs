@@ -1,3 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { experimental: { typedRoutes: false } };
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/memed-pulse',
+  images: { unoptimized: true },
+  experimental: { typedRoutes: false }
+};
 export default nextConfig;
