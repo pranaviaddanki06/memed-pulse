@@ -1,1 +1,0 @@
-import {analyze} from '@/lib/engine';export async function POST(req:Request){try{return Response.json({contributions:analyze(await req.json()).contributions,method:'Deterministic weighted feature attribution'})}catch{return Response.json({error:'Invalid request'},{status:400})}}
