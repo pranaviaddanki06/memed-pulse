@@ -1,1 +1,0 @@
-import {analyze} from '@/lib/engine';export async function POST(req:Request){try{const x=analyze(await req.json());return Response.json({score:x.score,percentile:x.percentile,confidence:x.confidence})}catch{return Response.json({error:'Invalid prediction request'},{status:400})}}
